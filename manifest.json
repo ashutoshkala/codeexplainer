@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Code Block Highlighter and Explainer",
+    "version": "1.0",
+    "description": "Highlights code blocks and adds an explain button.",
+    "permissions": [
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://openrouter.ai/api/v1/chat/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  
