@@ -1,20 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Code Block Highlighter and Explainer",
-    "version": "1.0",
-    "description": "Highlights code blocks and adds an explain button.",
-    "permissions": [
-      "activeTab"
-    ],
-    "host_permissions": [
-      "https://openrouter.ai/api/v1/chat/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "css": ["styles.css"]
-      }
-    ]
+  "manifest_version": 3,
+  "name": "Code Block Highlighter and Explainer",
+  "version": "1.0",
+  "description": "Highlights code blocks and adds an explain button.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://openrouter.ai/api/v1/chat/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/hello.png"
+    }
   }
-  
+}
